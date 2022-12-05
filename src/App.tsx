@@ -1,19 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
-
-import { Nav } from './Nav';
-
-import { Home } from './components/Home';
+import { Outlet } from 'react-router-dom';
+import { Nav } from './components/Nav';
 
 function App() {
   return (
-    <div className='App'>
-      <header>
-        <Nav />
-      </header>
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
-    </div>
+    <>
+      <Nav />
+      <Outlet />
+    </>
   );
 }
 
